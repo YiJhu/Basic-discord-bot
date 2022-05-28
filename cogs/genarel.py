@@ -24,7 +24,7 @@ class Genarel(Core):
     async def _ping(self, ctx: SlashContext):
         """Ping latency"""
         embed = discord.Embed(title="ping latency", color=0xfe5901, timestamp=datetime.datetime.utcnow())
-        embed.add_field(name="Api latency", value="%s ms" %(f'{round(self.bot.latency*1000)}'), inline=False)
+        embed.add_field(name="Api latency", value="%s ms" % f'{round(self.bot.latency * 1000)}', inline=False)
         embed.set_footer(text="DN-Test")
         await ctx.send(embeds = [embed])
 
@@ -46,7 +46,6 @@ class Genarel(Core):
         embed.add_field(name="Total of voice channel", value="%s" %(voice_channel), inline=False)
         embed.set_footer(text="DN-Test")
         await ctx.send(embeds = [embed])
-    
 
 
 def setup(bot):
